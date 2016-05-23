@@ -21,7 +21,7 @@
 
 
  - Execute:
-	- # ps -ef | grep postgres
-	- # su - postgres
-	- $ psql
+	- ps -ef | grep postgres
+	- su - postgres
+	- psql
 
