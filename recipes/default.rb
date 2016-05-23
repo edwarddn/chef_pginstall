@@ -41,18 +41,16 @@ execute "start_default_pg" do
   command "update-rc.d postgresql defaults"
 end
 
+execute "add_user_pg" do
+ command "useradd postgres --home-dir /database --shell /bin/bash"
+ ignore_failure true
+end
+
 directory "/database" do
   owner "postgres"
   group "postgres"
   mode 0755
   action :create
-  ignore_failure true
-end
-
-
-execute "add_user_pg" do
- command "useradd postgres --home-dir /database --shell /bin/bash"
- ignore_failure true
 end
 
 cookbook_file "/var/lib/locales/supported.d/local" do 
