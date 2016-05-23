@@ -12,7 +12,7 @@
 	- git clone https://github.com/edwarddn/chef_pginstall.git -l cookbooks/pginstall
 
  - Create your json (json_postgres.json)
- - nano json_postgres.json
+ 	- nano json_postgres.json
 	- Add line: 
 		-  {   "run_list": [ "recipe[pginstall]" ] } 
 
